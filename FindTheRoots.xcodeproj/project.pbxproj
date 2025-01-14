@@ -6,17 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		16B965F52D36C496008766C3 /* RootsCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B965F22D36C496008766C3 /* RootsCalculatorView.swift */; };
+		16B965F62D36C496008766C3 /* FindTheRootsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B965F32D36C496008766C3 /* FindTheRootsApp.swift */; };
+		16B965F72D36C496008766C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16B965EF2D36C496008766C3 /* Preview Assets.xcassets */; };
+		16B965F82D36C496008766C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16B965F12D36C496008766C3 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		16B965DE2D36C48A008766C3 /* FindTheRoots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindTheRoots.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16B965EF2D36C496008766C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		16B965F12D36C496008766C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16B965F22D36C496008766C3 /* RootsCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootsCalculatorView.swift; sourceTree = "<group>"; };
+		16B965F32D36C496008766C3 /* FindTheRootsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindTheRootsApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		16B965E02D36C48A008766C3 /* FindTheRoots */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FindTheRoots;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		16B965DB2D36C48A008766C3 /* Frameworks */ = {
@@ -32,7 +35,7 @@
 		16B965D52D36C489008766C3 = {
 			isa = PBXGroup;
 			children = (
-				16B965E02D36C48A008766C3 /* FindTheRoots */,
+				16B965F42D36C496008766C3 /* FindTheRoots */,
 				16B965DF2D36C48A008766C3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +46,33 @@
 				16B965DE2D36C48A008766C3 /* FindTheRoots.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		16B965F02D36C496008766C3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				16B965EF2D36C496008766C3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		16B965F42D36C496008766C3 /* FindTheRoots */ = {
+			isa = PBXGroup;
+			children = (
+				16B965F32D36C496008766C3 /* FindTheRootsApp.swift */,
+				16B965FA2D36C4B1008766C3 /* Views */,
+				16B965F02D36C496008766C3 /* Preview Content */,
+				16B965F12D36C496008766C3 /* Assets.xcassets */,
+			);
+			path = FindTheRoots;
+			sourceTree = "<group>";
+		};
+		16B965FA2D36C4B1008766C3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				16B965F22D36C496008766C3 /* RootsCalculatorView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +89,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				16B965E02D36C48A008766C3 /* FindTheRoots */,
 			);
 			name = FindTheRoots;
 			packageProductDependencies = (
@@ -109,6 +136,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16B965F72D36C496008766C3 /* Preview Assets.xcassets in Resources */,
+				16B965F82D36C496008766C3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16B965F52D36C496008766C3 /* RootsCalculatorView.swift in Sources */,
+				16B965F62D36C496008766C3 /* FindTheRootsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
