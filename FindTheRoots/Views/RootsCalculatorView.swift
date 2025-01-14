@@ -8,10 +8,26 @@
 import SwiftUI
 
 struct RootsCalculatorView: View {
+    
+    //Stored
     @State private var a: Double = 1.0
     @State private var b: Double = -6.0
     @State private var c: Double = 8.0
-        
+    
+    //Computed properties
+    var result: String {
+        let discriminant = b * b - 4 * a * c
+        //Check for negative discriminant
+        if discriminant < 0 {
+            return "No real roots."
+        } else {
+            let x1 = ( b * -1 - discriminant.squareRoot() ) / (2 * a)
+            let x2 = ( b * -1 + discriminant.squareRoot() ) / (2 * a)
+            
+            return "x ≈ \(x1.formatted(.number.precision(.fractionLength(2)))) and x ≈ \(x2.formatted(.number.precision(.fractionLength(2))))"
+        }
+    }
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -48,7 +64,7 @@ struct RootsCalculatorView: View {
                     }
                 }
                 
-                Text("x ≈ 2.00 and x ≈ 4.00")
+                Text(result)
                     .font(Font.custom("Times New Roman",
                                       size: 24.0,
                                       relativeTo: .body))
