@@ -14,6 +14,11 @@ struct RootsCalculatorView: View {
     @State private var b: Double = -6.0
     @State private var c: Double = 8.0
     
+    // List of prior results
+    @State var priorResults: [Result] = []
+    
+    
+    
     //Computed properties
     var result: String {
         let discriminant = b * b - 4 * a * c
@@ -68,7 +73,43 @@ struct RootsCalculatorView: View {
                     .font(Font.custom("Times New Roman",
                                       size: 24.0,
                                       relativeTo: .body))
+                Button(
+                    action: {
+                        let latestResult = Result(
+                            a: a,
+                            b: b,
+                            c: c,
+                            roots: result)
+                        priorResults.append(latestResult)
+                        
+                    },
+                    label: {
+                        Text("Save Result")
+                    })
+                .buttonStyle(.bordered)
+                .padding()
                 
+                
+                //History label
+                HStack{
+                    Text("History")
+                        .font(.title)
+                        .fontWeight(.bold)
+                    Spacer()
+                }
+                
+                //The actual list of result
+                
+                List(priorResults.reversed()) { currentResult in
+            HStack{
+                    Spacer()
+                    ResultView(somePriorRsult:  currentResult)
+                    Spacer()
+                }
+            }
+                
+              
+
                 Spacer()
             }
             .padding()
